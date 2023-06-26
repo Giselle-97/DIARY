@@ -1,0 +1,34 @@
+.header {
+}
+.header__img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.divHero2 {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.container__fieldset {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.legend {
+}
+.user {
+  width: 230px;
+}
+.password {
+  //width: 220px;
+}
+.divFooter__img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
