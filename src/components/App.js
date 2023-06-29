@@ -7,7 +7,7 @@ import Calendar from './pages/Calendar';
 import Contact from './pages/Contact';
 import Settings from './pages/Settings';
 import imgDiary from '../images/logo-diary.png';
-import imgLogo from '../images/logo-giselle.png';
+import imgLogo from '../images/Giselle-logo1.png';
 import '../styles/App.scss';
 
 function App() {
