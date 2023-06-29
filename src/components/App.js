@@ -6,8 +6,8 @@ import Notes from './pages/Notes';
 import Calendar from './pages/Calendar';
 import Contact from './pages/Contact';
 import Settings from './pages/Settings';
-import imgDiary from '../images/logo-diary.png';
-import imgLogo from '../images/Giselle-logo1.png';
+import imgDiary from '../images/logo.png';
+import imgLogo from '../images/giselle-logo.png';
 import '../styles/App.scss';
 
 function App() {
@@ -15,27 +15,9 @@ function App() {
     <div>
       <header className='header'>
         <img className='header__img' src={imgDiary} />
-
-        <ul>
-          <li>
-            <NavLink to='/'>Inicio</NavLink>
-          </li>
-          <li>
-            <NavLink to='/diary'>Agenda</NavLink>
-          </li>
-          <li>
-            <NavLink to='/notes'>Notas</NavLink>
-          </li>
-          <li>
-            <NavLink to='/calendar'>Calendar</NavLink>
-          </li>
-          <li>
-            <NavLink to='/contacto'>Contacto</NavLink>
-          </li>
-          <li>
-            <NavLink to='/settings'>Ajustes</NavLink>
-          </li>
-        </ul>
+        <p className='header__text'>
+          "El secreto del ÉXITO es organizar bien tu TIEMPO"
+        </p>
       </header>
       <main>
         <Routes>
@@ -55,7 +37,7 @@ function App() {
               Contacto
             </NavLink>
           </nav>
-          <img src={imgLogo} />
+          <img className='divFooter__img' src={imgLogo} />
         </div>
       </footer>
     </div>
