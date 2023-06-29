@@ -1,6 +1,6 @@
 import '../../styles/pages/calendar.scss';
 
-function Landing() {
+function Calendar() {
   return (
     <>
       <form action=''>

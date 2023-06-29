@@ -7,7 +7,7 @@ function Contact() {
         <img src='../assets/images/logo-diary-green.png' alt='' />
       </div>
       <div>
-        <fieldset class='fieldset'>
+        <fieldset className='fieldset'>
           <legend>Datos personales</legend>
           <form action=''>
             <label for=''>Nombre</label>

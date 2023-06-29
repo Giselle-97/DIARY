@@ -1,9 +1,10 @@
 import '../../styles/pages/diary.scss';
 
-function Landing() {
+function Diary() {
   return (
     <>
       <div>
+        <p>365 días y un millón de planes</p>
         <p>Hoy</p>
         <p className='text'>Mañana</p>
         <p>Empiezo</p>
