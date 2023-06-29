@@ -83,9 +83,11 @@
 .user {
   width: 230px;
   font-family: $roboto-slab;
+  border: solid 1px mediumvioletred;
 }
 .password {
   //width: 230px;
+  border: solid 1px mediumvioletred;
   font-family: $roboto-slab;
 }
 .container__input {
@@ -160,36 +162,3 @@
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388;
 }
-
-/*.divFooter__contact {
-  text-decoration: none;
-  border: 2px solid;
-  margin: 0.5em;
-  padding: 1em 2em;
-  color: #ffa260;
-  --hover: red; // #e5ff60;
-  transition: 0.25s;
-}
-
-.divFooter__contact:hover {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  -webkit-transform: translateY(1rem);
-  transform: translateY(-4rem);
-  border-color: var(--hover);
-  color: #d11414;
-}
-*/
-/*.divFooter__contact {
-  text-decoration: none;
-  color: mediumblue;
-}
-.divFooter__contact:hover {
-  cursor: pointer;
-  //background-color: white;
-  color: blue;
-  // box-shadow: 0 4px 20px blue;
-  //border-radius: 10px;
-  padding: 2px;
-  transition: all 0.2 ease;
-}
-*/
