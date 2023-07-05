@@ -1,0 +1,79 @@
+@import '../core/variables';
+
+/* 
+body {
+  background: linear-gradient(rgb(246, 44, 209), rgba(247, 166, 239, 0.781));
+}
+
+background: linear-gradient(
+    rgb(116, 4, 95),
+    rgba(180, 3, 162, 0.781),
+    rgba(225, 41, 170, 0.595),
+    rgba(243, 159, 219, 0.499),
+    rgba(250, 202, 236, 0.284)
+  );*/
+main {
+  min-height: 80vh;
+  background: linear-gradient(
+    rgb(116, 4, 95),
+    rgba(180, 3, 162, 0.781),
+    rgba(225, 41, 170, 0.595),
+    rgba(243, 159, 219, 0.499),
+    rgba(250, 202, 236, 0.284)
+  );
+}
+
+.containerLandingT__text {
+  font-family: $courgette;
+  padding: 20px;
+  color: #fff;
+}
+
+.containerLandingT__text2 {
+  padding: 20px;
+  font-family: $dancing-script;
+  font-weight: bold;
+}
+
+.containerLandingT__text3 {
+  padding: 20px;
+  font-family: $emilys-candy;
+}
+
+.containerBtn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  //padding: 5px 10px 5px 10px;
+}
+
+.btn1 {
+  margin: 0 5px 5px 5px;
+  background-color: rgba(101, 187, 198, 0);
+  border-radius: 5px;
+  width: 100px;
+  font-family: $courgette;
+  padding: 4px 0 4px;
+  color: #fff;
+  border: solid 2px rgb(255, 217, 0);
+}
+.btn1:hover {
+  cursor: pointer;
+  color: rgb(255, 217, 0);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.btnDiary {
+  background-color: rgba(101, 187, 198, 0);
+  border: solid 2px rgb(255, 217, 0);
+  border-radius: 5px;
+}
+.btnCalendar {
+  border-radius: 5px;
+}
+.btnContact {
+  background-color: rgba(101, 187, 198, 0);
+  border-radius: 5px;
+}

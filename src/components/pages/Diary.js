@@ -4,7 +4,7 @@ function Diary() {
   return (
     <>
       <div>
-        <p>365 días y un millón de planes</p>
+        <p className='text_diary'>365 días y un millón de planes..</p>
         <p>Hoy</p>
         <p className='text'>Mañana</p>
         <p>Empiezo</p>
@@ -23,7 +23,7 @@ function Diary() {
             </form>
           </li>
         </ul>
-        <button>Guardar</button>
+        <button className='btn1'>Guardar</button>
       </div>
     </>
   );

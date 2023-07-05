@@ -14,7 +14,7 @@ function Notes() {
         </form>
         <p>Si puedes soñarlo, puedes hacerlo</p>
         <p>Comienza a escribir aquí......</p>
-        <button>Guardar</button>
+        <button className='btn1'>Guardar</button>
       </div>
     </>
   );

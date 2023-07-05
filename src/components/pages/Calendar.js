@@ -12,7 +12,7 @@ function Calendar() {
         </select>
       </form>
       <p>Aquí va el calendario</p>
-      <button>Guardar</button>
+      <button className='btn1'>Guardar</button>
     </>
   );
 }
