@@ -40,7 +40,7 @@
   text-align: center;
   color: white;
   font-weight: 500;
-  font-family: $handlee;
+  //font-family: $handlee;
 }
 .header__menu {
   text-decoration: none;
@@ -198,35 +198,3 @@
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388;
 }
-/*  <ul className='header__menu'>
-          <li>
-            <NavLink className='header__menu--li' to='/'>
-              Inicio
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className='header__menu--li' to='/diary'>
-              Agenda
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className='header__menu--li' to='/notes'>
-              Notas
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className='header__menu--li' to='/calendar'>
-              Calendar
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className='header__menu--li' to='/contacto'>
-              Contacto
-            </NavLink>
-          </li>
-          <li>
-            <NavLink className='header__menu--li' to='/settings'>
-              Ajustes
-            </NavLink>
-          </li>
-        </ul>*/

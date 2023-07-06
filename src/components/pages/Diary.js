@@ -5,9 +5,6 @@ function Diary() {
     <>
       <div>
         <p className='text_diary'>365 días y un millón de planes..</p>
-        <p>Hoy</p>
-        <p className='text'>Mañana</p>
-        <p>Empiezo</p>
       </div>
       <div>
         <p>Contenido de la lista</p>

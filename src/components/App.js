@@ -22,7 +22,16 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path='/' element={<Landing></Landing>} />
+          <Route
+            path='/'
+            element={
+              <Landing>
+                <>
+                  <div></div>
+                </>
+              </Landing>
+            }
+          />
           <Route path='/home' element={<Home></Home>} />
           <Route path='/diary' element={<Diary></Diary>} />
           <Route path='/notes' element={<Notes></Notes>} />
