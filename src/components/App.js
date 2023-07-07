@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Home from './pages/Home';
 import Diary from './pages/Diary';
@@ -12,26 +12,18 @@ import { Link } from 'react-router-dom';
 import '../styles/App.scss';
 
 function App() {
+  const { pathname } = useLocation();
+
+  if (pathname === '/') {
+    return <Landing></Landing>;
+  }
   return (
     <div>
       <header className='header'>
         <img className='header__img' src={imgDiary} alt='' />
-        <p className='header__text'>
-          "El secreto del ÉXITO es organizar bien tu TIEMPO"
-        </p>
       </header>
       <main>
         <Routes>
-          <Route
-            path='/'
-            element={
-              <Landing>
-                <>
-                  <div></div>
-                </>
-              </Landing>
-            }
-          />
           <Route path='/home' element={<Home></Home>} />
           <Route path='/diary' element={<Diary></Diary>} />
           <Route path='/notes' element={<Notes></Notes>} />
