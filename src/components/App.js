@@ -19,9 +19,6 @@ function App() {
   }
   return (
     <div>
-      <header className='header'>
-        <img className='header__img' src={imgDiary} alt='' />
-      </header>
       <main>
         <Routes>
           <Route path='/home' element={<Home></Home>} />
@@ -32,19 +29,6 @@ function App() {
           <Route path='/settings' element={<Settings></Settings>} />
         </Routes>
       </main>
-      <footer className='footer'>
-        <div className='divFooter'>
-          <nav>
-            <Link className='divFooter__btn' to='/contact'>
-              Contacto
-            </Link>
-            <Link to='/home' className='divReturn__text'>
-              Home
-            </Link>
-          </nav>
-          <img className='divFooter__img' src={imgLogo} alt='' />
-        </div>
-      </footer>
     </div>
   );
 }
