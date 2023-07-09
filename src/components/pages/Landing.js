@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import imgDiary from '../../images/logo.png';
+import imgDiary from '../../images/222.png';
 import imgLogo from '../../images/giselle-logo.png';
 import '../../styles/pages/landing.scss';
 

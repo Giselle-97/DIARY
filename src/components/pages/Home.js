@@ -47,7 +47,7 @@ function Home() {
               <img className='divContact__icon' src={imgContact} alt='' />
             </div>
           </Link>
-          <Link Link className='linkSettings' to='/Contact'>
+          <Link Link className='linkSettings' to='/Settings'>
             <div className='divSettings'>
               <p className='divSettings__text'>Ajustes</p>
               <img className='divSettings__icon' src={imgSettings} alt='' />
