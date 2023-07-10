@@ -1,7 +1,7 @@
 import '../../styles/pages/home.scss';
 import { Link } from 'react-router-dom';
-import imgDiary from '../../images/logo.png';
-import imgLogo from '../../images/giselle-logo.png';
+import imgDiary from '../../images/222.png';
+import imgLogo from '../../images/Giselle.png';
 import imgHome from '../../images/home.png';
 import imgIconDiary from '../../images/diary2.png';
 import imgNotes from '../../images/notas.png';

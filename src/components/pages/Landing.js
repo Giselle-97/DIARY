@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import imgDiary from '../../images/222.png';
-import imgLogo from '../../images/giselle-logo.png';
+import imgLogo from '../../images/Giselle.png';
 import '../../styles/pages/landing.scss';
 
 function Landing() {
