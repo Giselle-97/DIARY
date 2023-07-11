@@ -18,18 +18,16 @@ function App() {
     return <Landing></Landing>;
   }
   return (
-    <div>
-      <main>
-        <Routes>
-          <Route path='/home' element={<Home></Home>} />
-          <Route path='/diary' element={<Diary></Diary>} />
-          <Route path='/notes' element={<Notes></Notes>} />
-          <Route path='/calendar' element={<Calendar></Calendar>} />
-          <Route path='/contact' element={<Contact></Contact>} />
-          <Route path='/settings' element={<Settings></Settings>} />
-        </Routes>
-      </main>
-    </div>
+    <>
+      <Routes>
+        <Route path='/home' element={<Home></Home>} />
+        <Route path='/diary' element={<Diary></Diary>} />
+        <Route path='/notes' element={<Notes></Notes>} />
+        <Route path='/calendar' element={<Calendar></Calendar>} />
+        <Route path='/contact' element={<Contact></Contact>} />
+        <Route path='/settings' element={<Settings></Settings>} />
+      </Routes>
+    </>
   );
 }
 

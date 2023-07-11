@@ -8,6 +8,7 @@ import imgNotes from '../../images/notas.png';
 import imgCalendar from '../../images/calendario3.png';
 import imgContact from '../../images/contacto1.png';
 import imgSettings from '../../images/ajustes1.png';
+import imgMenu from '../../images/menu.png';
 
 function Home() {
   return (
@@ -17,6 +18,12 @@ function Home() {
           <img className='header__img' src={imgDiary} alt='' />
         </div>
         <div className='headerHome__divIcon'>
+          <Link className='linkMenu' to='/Menu'>
+            <div className='divMenu'>
+              <p className='divMenu__text'>Menu</p>
+              <img className='divMenu__icon' src={imgMenu} alt='' />
+            </div>
+          </Link>
           <Link className='linkHome' to='/Home'>
             <div className='divHome'>
               <p className='divHome__text'>Home</p>

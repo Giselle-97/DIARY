@@ -16,6 +16,20 @@ function Notes() {
         <p>Comienza a escribir aquí......</p>
         <button className='btn1'>Guardar</button>
       </div>
+      <div className='wraper'>
+        <div className='box'>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </>
   );
 }

@@ -1,7 +1,7 @@
 @import '../core/variables';
 
 main {
-  min-height: 80vh;
+  min-height: 70vh;
 }
 .headerHome {
   background: linear-gradient(rgb(246, 44, 209));
@@ -43,7 +43,7 @@ main {
 }
 */
 //img
-.divCalendar__icon {
+.divMenu__icon {
   width: 20px;
   height: 20px;
 }
@@ -56,6 +56,10 @@ main {
   height: 20px;
 }
 .divNotes__icon {
+  width: 20px;
+  height: 20px;
+}
+.divCalendar__icon {
   width: 20px;
   height: 20px;
 }
