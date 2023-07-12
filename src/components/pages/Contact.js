@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Contact() {
   return (
-    <>
+    <div className='containerContact'>
       <div>
         <img src='../assets/images/logo-diary-green.png' alt='' />
       </div>
@@ -72,7 +72,7 @@ function Contact() {
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -12,53 +12,45 @@ import imgMenu from '../../images/menu.png';
 
 function Home() {
   return (
-    <>
+    <div className='containerHome'>
       <header className='headerHome'>
         <div className='headerHome__divImg'>
-          <img className='header__img' src={imgDiary} alt='' />
+          <img
+            className='headerHome__divImg--diary'
+            src={imgDiary}
+            alt='logo diary'
+          />
         </div>
+
         <div className='headerHome__divIcon'>
           <Link className='linkMenu' to='/Menu'>
-            <div className='divMenu'>
-              <p className='divMenu__text'>Menu</p>
-              <img className='divMenu__icon' src={imgMenu} alt='' />
-            </div>
+            <img className='linkMenu__icon' src={imgMenu} alt='menu' />
           </Link>
           <Link className='linkHome' to='/Home'>
-            <div className='divHome'>
-              <p className='divHome__text'>Home</p>
-              <img className='divHome__icon' src={imgHome} alt='' />
-            </div>
+            <img className='linkHome__icon' src={imgHome} alt='' />
           </Link>
           <Link className='linkDiary' to='/Diary'>
-            <div className='divDiary'>
-              <p className='divDiary__text'>Agenda</p>
-              <img className='divDiary__icon' src={imgIconDiary} alt='' />
-            </div>
+            <img className='linkDiary__icon' src={imgIconDiary} alt='diary' />
           </Link>
           <Link Link className='linkNotes' to='/Notes'>
-            <div className='divNotes'>
-              <p className='divNotes__text'>Notas</p>
-              <img className='divNotes__icon' src={imgNotes} alt='' />
-            </div>
+            <img className='linkNotes__icon' src={imgNotes} alt='notes' />
           </Link>
           <Link Link className='linkCalendar' to='/Calendar'>
-            <div className='divCalendar'>
-              <p className='divCalendar__text'>Calendar</p>
-              <img className='divCalendar__icon' src={imgCalendar} alt='' />
-            </div>
+            <img
+              className='linkCalendar__icon'
+              src={imgCalendar}
+              alt='calendar'
+            />
           </Link>
           <Link Link className='linkContact' to='/Contact'>
-            <div className='divContact'>
-              <p className='divContact__text'>Contacto </p>
-              <img className='divContact__icon' src={imgContact} alt='' />
-            </div>
+            <img className='linkContact__icon' src={imgContact} alt='contact' />
           </Link>
           <Link Link className='linkSettings' to='/Settings'>
-            <div className='divSettings'>
-              <p className='divSettings__text'>Ajustes</p>
-              <img className='divSettings__icon' src={imgSettings} alt='' />
-            </div>
+            <img
+              className='linkSettings__icon'
+              src={imgSettings}
+              alt='settings'
+            />
           </Link>
         </div>
       </header>
@@ -83,10 +75,10 @@ function Home() {
               Contacto
             </Link>
           </nav>
-          <img className='divFooter__img' src={imgLogo} alt='' />
+          <img className='divFooter__img' src={imgLogo} alt='logo' />
         </div>
       </footer>
-    </>
+    </div>
   );
 }
 export default Home;

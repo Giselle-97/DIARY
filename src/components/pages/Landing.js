@@ -1,13 +1,16 @@
+import '../../styles/pages/landing.scss';
 import { Link } from 'react-router-dom';
 import imgDiary from '../../images/222.png';
 import imgLogo from '../../images/Giselle.png';
-import '../../styles/pages/landing.scss';
+//import imgIntagram from '../../images/instagram.png';
+//import imgFacebook from '../../images/facebook.png';
+//import imgLinkedin from '../../images/linkedin0 (1).png';
 
 function Landing() {
   return (
-    <div>
+    <div className='containerLanding'>
       <header className='header'>
-        <img className='header__img' src={imgDiary} alt='' />
+        <img className='header__img' src={imgDiary} alt='logo diary' />
         <p className='header__text'>
           "El secreto del ÉXITO es organizar bien tu TIEMPO"
         </p>
@@ -18,7 +21,7 @@ function Landing() {
             <fieldset className='container__login'>
               <legend className='legend'>Crea tu perfil</legend>
               <div className='container__input'>
-                <label className='userLabel' for='user'>
+                <label className='userLabel' htmlFor='user'>
                   Usuario
                 </label>
                 <input
@@ -29,7 +32,7 @@ function Landing() {
                 />
               </div>
               <div className='container__input'>
-                <label className='userLabel' for='password'>
+                <label className='userLabel' htmlFor='password'>
                   Contraseña
                 </label>
                 <input
@@ -56,7 +59,7 @@ function Landing() {
               Home
             </Link>
           </nav>
-          <img className='divFooter__img' src={imgLogo} alt='' />
+          <img className='divFooter__img' src={imgLogo} alt='logo' />
         </div>
       </footer>
     </div>

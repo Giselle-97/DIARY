@@ -2,18 +2,14 @@ import '../../styles/pages/calendar.scss';
 
 function Calendar() {
   return (
-    <>
-      <form action=''>
-        <select name='' id=''>
-          <option value=''>Fuente</option>
-          <option value=''>Estilo</option>
-          <option value=''>Color</option>
-          <option value=''>Stikers</option>
-        </select>
+    <div className='containerCalendar'>
+      <form class='form'>
+        <input type='text' required />
+        <label class='lbl-nombre'>
+          <span class='text-nomb'>Nombre</span>
+        </label>
       </form>
-      <p>Aquí va el calendario</p>
-      <button className='btn1'>Guardar</button>
-    </>
+    </div>
   );
 }
 export default Calendar;

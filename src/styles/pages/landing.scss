@@ -1,5 +1,8 @@
 @import '../core/variables';
-
+main {
+  min-height: 70%;
+  padding: 20px;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -19,7 +22,7 @@
   background: transparent;
   width: 35%;
   height: 35%;
-  border-radius: 50%;
+  // border-radius: 50%;
   //border: solid 2px mediumseagreen;
   //box-shadow: 8px 4px 4px rgb(128, 129, 128);
 }
@@ -40,47 +43,6 @@
   text-decoration: none;
   color: #fff;
 }
-/*
-htnl <div className='hero'>
-          <div className='divHero'>
-            <p className='divHero__text'>
-              tu Tiempo....tu Tesoro... Dale a cada día la posibilidad de ser el
-              mejor día de tu VIDA.
-            </p>
-            <p className='divHero__text--text2'>
-              Organiza tu día a día de una manera más fácil y cómoda.
-            </p>
-          </div>
-          css
-.hero {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 30px;
-}
-.divHero {
-  //background-color: rgb(249, 221, 197);
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  border: dotted 2px mediumvioletred;
-  padding: 15px;
-  gap: 10px;
-}
-.divHero__text {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.2;
-  font-family: $courgette;
-}
-.divHero__text--text2 {
-  font-size: 10px;
-  font-family: $roboto-slab;
-}
-*/
 .hero {
   display: flex;
   flex-direction: column;
