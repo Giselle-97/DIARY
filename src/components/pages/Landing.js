@@ -16,37 +16,37 @@ function Landing() {
         </p>
       </header>
       <main className='hero'>
-        <div className='divHero'>
-          <form className='container'>
-            <fieldset className='container__login'>
-              <legend className='legend'>Crea tu perfil</legend>
-              <div className='container__input'>
-                <label className='userLabel' htmlFor='user'>
-                  Usuario
-                </label>
+        <div className='divForm'>
+          <div className='box1'>
+            <p className='text1'>Bienvenido</p>
+            <form className='form'>
+              <div className='inputBox'>
                 <input
-                  className='user'
                   type='text'
-                  name='user'
-                  placeholder='nina@gmail.com'
+                  placeholder='email'
+                  className='inputControl'
                 />
               </div>
-              <div className='container__input'>
-                <label className='userLabel' htmlFor='password'>
-                  Contraseña
-                </label>
+
+              <div className='inputBox'>
                 <input
-                  className='password'
-                  type='text'
-                  name='password'
-                  placeholder='nina555'
+                  type='password'
+                  placeholder='Password'
+                  className='inputControl'
                 />
+
+                <div className='inputLink'>
+                  <Link to='' className='inputLink__text'>
+                    Has olvidado tu contraseña
+                  </Link>
+                </div>
               </div>
-              <div className='divBtn'>
-                <button className='btn'>Registrarse</button>
-              </div>
-            </fieldset>
-          </form>
+              <button type='submit' className='btnSubmit'>
+                Iniciar sesión
+              </button>
+            </form>
+            <p>No tienes una cuenta?</p>
+          </div>
         </div>
       </main>
       <footer className='footer'>
