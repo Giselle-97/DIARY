@@ -1,0 +1,129 @@
+@import '../core/variables';
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: mediumturquoise;
+}
+
+.containerForm {
+  width: 90%;
+  //height: 90vh;
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-around;
+  transition: all 0.5s ease-out;
+}
+.welcomeBack {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.message {
+  padding: 1rem;
+}
+.message h2 {
+  //font-size: 1.7rem;
+  padding: 1rem 0;
+}
+.message button {
+  //padding: 1rem;
+  font-weight: 400;
+  background: #4a4aee;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  //font-size: 0.9rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease-in;
+  color: #fff;
+}
+.message button:hover {
+  background-color: #6464f8;
+}
+.formL {
+  //width: 400px;
+  padding: 1rem;
+  //margin: 2rem;
+  background-color: rgba(81, 79, 81, 0.555);
+  text-align: center;
+}
+.createAccount {
+  padding: 1.2rem 0; //2.7
+  //font-size: 1.7rem;
+}
+.icons {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.icon {
+  width: 20px; //40px
+  height: 20px;
+}
+.borderIcon {
+  height: 10px; //20px
+  width: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; //1.5
+  border: solid thin #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in;
+}
+.borderIcon:hover {
+  background-color: #4a4aee;
+  cursor: pointer;
+}
+.formL input {
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: white thin solid;
+  text-align: center;
+  outline: none;
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+  //color: #fff;
+}
+::placeholder {
+  color: #4a4aee;
+}
+.formL .inputBtn {
+  width: 60%;
+  margin: auto;
+  border: solid thin white;
+  //padding: 0.7rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  font-weight: 600;
+  //margin-top: 3rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  //color: #222;
+}
+/*
+.signIn {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.signIn.active {
+  opacity: 1;
+  visibility: visible;
+}
+.signUp.active {
+  opacity: 0;
+  visibility: hidden;
+}*/
+//
