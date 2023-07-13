@@ -15,40 +15,7 @@ function Landing() {
           "El secreto del ÉXITO es organizar bien tu TIEMPO"
         </p>
       </header>
-      <main className='hero'>
-        <div className='divHero'>
-          <form className='container'>
-            <fieldset className='container__login'>
-              <legend className='legend'>Crea tu perfil</legend>
-              <div className='container__input'>
-                <label className='userLabel' htmlFor='user'>
-                  Usuario
-                </label>
-                <input
-                  className='user'
-                  type='text'
-                  name='user'
-                  placeholder='nina@gmail.com'
-                />
-              </div>
-              <div className='container__input'>
-                <label className='userLabel' htmlFor='password'>
-                  Contraseña
-                </label>
-                <input
-                  className='password'
-                  type='text'
-                  name='password'
-                  placeholder='nina555'
-                />
-              </div>
-              <div className='divBtn'>
-                <button className='btn'>Registrarse</button>
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      </main>
+      <main className='hero'></main>
       <footer className='footer'>
         <div className='divFooter'>
           <nav>
