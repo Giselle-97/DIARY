@@ -1,7 +1,7 @@
 import '../styles/pages/formLanding.scss';
 import imgInstagram from '../images/instagram.png';
 import imgFacebook from '../images/facebook.png';
-import imgLinkedin from '../images/linkedin2.png';
+import imgLinkedin from '../images/linkedin.png';
 
 function FormLanding() {
   /*EVENTO CLIK
