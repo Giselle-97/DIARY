@@ -1,10 +1,8 @@
-import '../../styles/pages/formLanding.scss';
-//import { Link } from 'react-router-dom';
-//import imgDiary from '../../images/222.png';
-//import imgLogo from '../../images/Giselle.png';
-import imgInstagram from '../../images/instagram.png';
-import imgFacebook from '../../images/facebook.png';
-import imgLinkedin from '../../images/linkedin0 (1).png';
+import '../styles/pages/formLanding.scss';
+import imgInstagram from '../images/instagram.png';
+import imgFacebook from '../images/facebook.png';
+import imgLinkedin from '../images/linkedin2.png';
+
 function FormLanding() {
   /*EVENTO CLIK
   hay que traer btnregistro, btn iniciar s, contenedor registro, contenedor inicar sesión"
