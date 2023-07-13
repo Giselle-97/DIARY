@@ -1,171 +1,129 @@
 @import '../core/variables';
+
 main {
-  min-height: 70%;
-  padding: 20px;
-}
-.header {
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 5px;
-  background: -webkit-linear-gradient(
-    right,
-    rgb(116, 4, 95),
-    rgb(243, 159, 219)
-  );
+  flex-direction: column;
+  color: mediumturquoise;
 }
 
-.header__img {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background: transparent;
-  width: 35%;
-  height: 35%;
-  // border-radius: 50%;
-  //border: solid 2px mediumseagreen;
-  //box-shadow: 8px 4px 4px rgb(128, 129, 128);
+.containerForm {
+  width: 90%;
+  //height: 90vh;
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-around;
+  transition: all 0.5s ease-out;
 }
-
-.header__text {
-  width: 180px;
-  font-size: 18px;
-  line-height: 1.3;
+.welcomeBack {
+  display: flex;
+  align-items: center;
   text-align: center;
-  color: white;
-  font-weight: 500;
-  //font-family: $handlee;
 }
-.header__menu {
-  text-decoration: none;
+.message {
+  padding: 1rem;
 }
-.header__menu--li {
-  text-decoration: none;
-  color: #fff;
+.message h2 {
+  //font-size: 1.7rem;
+  padding: 1rem 0;
 }
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.divHero {
-  display: flex;
-  justify-content: center;
-  padding: 20px 10px 28px 10px;
-}
-.container {
-  display: flex;
-  justify-content: center;
-}
-.container__login {
-  background-color: #fff;
-  border: 2px solid mediumvioletred;
-  display: flex;
-  flex-direction: column;
-  padding: 10px 15px 10px 15px;
-  //gap: 2px;
-  box-shadow: 8px 4px 4px grey;
-}
-.legend {
-  font-size: 15px;
-  font-family: $roboto-serif;
-  font-weight: bold;
-  /*background: -webkit-linear-gradient(#fff, mediumvioletred);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: tomato;
-  transition: all 0.4s ease-in-out;*/
-}
-.userLabel {
-  font-size: 14px;
-  padding-bottom: 2px;
-  font-family: $roboto-slab;
-}
-.user {
-  width: 230px;
-  font-family: $roboto-slab;
-  border: solid 1px mediumvioletred;
-}
-.password {
-  //width: 230px;
-  border: solid 1px mediumvioletred;
-  font-family: $roboto-slab;
-}
-.container__input {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 10px;
-}
-.divBtn {
-  display: flex;
-  justify-content: center;
-  padding: 15px 0 15px 0;
-}
-.btn {
-  background-color: rgb(168, 5, 138);
-  width: 100px;
-  font-family: $courgette;
-  color: #fff;
-  border: solid 1px rgb(168, 5, 138);
-  border-radius: 20px;
-  padding: 4px 0 4px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-.btn:hover {
+.message button {
+  //padding: 1rem;
+  font-weight: 400;
+  background: #4a4aee;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
   cursor: pointer;
-  color: rgb(168, 5, 138);
-  background-color: white;
-  box-shadow: 0 4px 20px rgb(168, 5, 138);
-  transition: all 0.2 ease;
-  border-color: rgb(168, 5, 138);
+  //font-size: 0.9rem;
+  margin-top: 2rem;
+  transition: all 0.3s ease-in;
+  color: #fff;
 }
-
-.footer {
-  //border: solid 2px mediumvioletred;
-  background: -webkit-linear-gradient(
-    left,
-    rgb(116, 4, 95),
-    rgb(243, 159, 219)
-  );
-  padding: 5px;
+.message button:hover {
+  background-color: #6464f8;
 }
-.divFooter {
+.formL {
+  //width: 400px;
+  padding: 1rem;
+  //margin: 2rem;
+  background-color: rgba(81, 79, 81, 0.555);
+  text-align: center;
+}
+.createAccount {
+  padding: 1.2rem 0; //2.7
+  //font-size: 1.7rem;
+}
+.icons {
+  width: 200px;
   display: flex;
   justify-content: space-around;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.icon {
+  width: 20px; //40px
+  height: 20px;
+}
+.borderIcon {
+  height: 10px; //20px
+  width: 10px;
+  display: flex;
   align-items: center;
-  gap: 90px;
-}
-.divFooter__img {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 35%;
-  height: 35%;
+  justify-content: center;
+  padding: 1rem; //1.5
+  border: solid thin #fff;
   border-radius: 50%;
-  //border: solid 1px blue;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in;
 }
-.divFooter__btn {
-  border: 0 solid;
-  font-family: $coiny;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
-  outline: 1px solid;
-  outline-color: #fff; //rgba(220, 19, 19, 0.5);
-  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
-  color: #fff;
+.borderIcon:hover {
+  background-color: #4a4aee;
   cursor: pointer;
+}
+.formL input {
+  width: 70%;
   display: block;
-  font-size: 10px;
-  padding: 10px;
-  text-decoration: none;
-  text-transform: uppercase;
-  //margin-left: 10px;
+  margin: auto;
+  margin-bottom: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: white thin solid;
+  text-align: center;
+  outline: none;
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+  //color: #fff;
 }
-
-.divFooter__btn:hover {
-  border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(243, 239, 239, 0.5),
-    0 0 20px rgba(211, 10, 10, 0.2);
-  outline-color: rgba(255, 255, 255, 0);
-  outline-offset: 15px;
-  text-shadow: 1px 1px 2px #427388;
+::placeholder {
+  color: #4a4aee;
 }
+.formL .inputBtn {
+  width: 60%;
+  margin: auto;
+  border: solid thin white;
+  //padding: 0.7rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  font-weight: 600;
+  //margin-top: 3rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  //color: #222;
+}
+/*
+.signIn {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+.signIn.active {
+  opacity: 1;
+  visibility: visible;
+}
+.signUp.active {
+  opacity: 0;
+  visibility: hidden;
+}*/
+//
