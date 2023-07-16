@@ -1,41 +1,4 @@
 @import '../core/variables';
 .containerSettings {
-  min-width: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: green;
-  height: 500px;
-}
-
-.divEmails {
-  position: relative;
-}
-.inputEmails {
-  width: 350px;
-  height: 60px;
-  border: 6px;
-  font-size: 18px;
-  padding: 0 15px;
-  border: solid 2px #fff;
-  background: transparent;
-  color: #fff;
-  outline: none;
-}
-.labels {
-  position: absolute;
-  top: 50%;
-  left: 15px;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 19px;
-  pointer-events: none;
-  transition: 0.3s;
-}
-input:focus ~ label {
-  top: 0;
-  left: 15px;
-  font-size: 16px;
-  padding: 0 12px;
-  //background: greenyellow;
 }

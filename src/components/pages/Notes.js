@@ -1,8 +1,11 @@
 import '../../styles/pages/notes.scss';
+import Header from '../Header';
+import Footer from '../Footer';
 
 function Notes() {
   return (
     <div className='containerNotes'>
+      <Header />
       <div className='box'>
         <div></div>
         <div></div>
@@ -28,6 +31,7 @@ function Notes() {
         <p>Comienza a escribir aquí......</p>
         <button className='btn1'>Guardar</button>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,14 +1,11 @@
 import '../../styles/pages/settings.scss';
-
+import Header from '../Header';
+import Footer from '../Footer';
 function Settings() {
   return (
     <div className='containerSettings'>
-      <div className='divEmails'>
-        <input className='inputEmails' type='text' required />
-        <label className='labels' htmlFor=''>
-          Email
-        </label>
-      </div>
+      <Header />
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,77 @@
+@import '../core/variables';
+.headerHome {
+  //background: red; //linear-gradient(rgb(246, 44, 209));
+  display: flex;
+}
+.headerHome__divImg {
+  width: 50%;
+  height: 50%;
+}
+.headerHome__divImg--diary {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background: transparent;
+  width: 80%;
+  height: 80%;
+}
+
+.linkHome {
+}
+.headerHome__divIcon {
+  display: flex;
+}
+//img
+.linkMenu__icon {
+  width: 20px;
+  height: 20px;
+}
+.linkHome__icon {
+  width: 20px;
+  height: 20px;
+}
+.linkDiary__icon {
+  width: 20px;
+  height: 20px;
+}
+.linkNotes__icon {
+  width: 20px;
+  height: 20px;
+}
+.linkCalendar__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.linkContact__icon {
+  width: 20px;
+  height: 20px;
+}
+.linkSettings__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.heroHome {
+  //background-color: burlywood;
+}
+.containerLandingT__text {
+  font-family: $courgette;
+  padding: 20px;
+  color: #fff;
+}
+
+.containerLandingT__text2 {
+  padding: 20px;
+  //font-family: $dancing-script;
+  font-weight: bold;
+}
+
+.containerLandingT__text3 {
+  padding: 20px;
+  font-family: $emilys-candy;
+}
+
+.footerHome {
+  background: linear-gradient(rgba(246, 192, 241, 0.66));
+}

@@ -1,4 +1,6 @@
 @import '../core/variables';
+@import 'react-big-calendar/lib/sass/styles';
+@import 'react-big-calendar/lib/addons/dragAndDrop/styles'; // if using DnD
 /*body {
   width: 100%;
   height: 100vh;
@@ -7,3 +9,9 @@
   align-items: center;
   background: #0b1721;
 }*/
+.containerCalendar {
+  min-height: 100vh;
+}
+//css: react-big-calendar/lib/css/react-big-calendar.css
+
+//https://www.npmjs.com/package/react-big-calendar

@@ -1,8 +1,11 @@
 import '../../styles/pages/diary.scss';
+import Header from '../Header';
+import Footer from '../Footer';
 
 function Diary() {
   return (
     <>
+      <Header />
       <div>
         <p className='text_diary'>365 días y un millón de planes..</p>
       </div>
@@ -22,6 +25,7 @@ function Diary() {
         </ul>
         <button className='btn1'>Guardar</button>
       </div>
+      <Footer />
     </>
   );
 }

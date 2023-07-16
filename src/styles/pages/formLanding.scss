@@ -4,7 +4,7 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: mediumturquoise;
+  //mediumturquoise;
 }
 
 .containerForm {
@@ -20,17 +20,27 @@ main {
   align-items: center;
   text-align: center;
 }
-.message {
+.divMessage {
   padding: 1rem;
 }
-.message h2 {
+.divMessage__text1 {
   //font-size: 1.7rem;
   padding: 1rem 0;
+  color: #74045f;
 }
-.message button {
+.divMessage__text1:hover {
+  color: #bf09cf;
+}
+.divMessage__text2 {
+  color: #74045f;
+}
+.divMessage__text2:hover {
+  color: #bf09cf;
+}
+.divMessage button {
   //padding: 1rem;
   font-weight: 400;
-  background: #4a4aee;
+  background: #74045f; //#4a4aee;
   border-radius: 2rem;
   border: none;
   outline: none;
@@ -40,18 +50,20 @@ main {
   transition: all 0.3s ease-in;
   color: #fff;
 }
-.message button:hover {
-  background-color: #6464f8;
+.divMessage button:hover {
+  background-color: #f12eb9; //#6464f8;
 }
 .formL {
   //width: 400px;
   padding: 1rem;
   //margin: 2rem;
-  background-color: rgba(81, 79, 81, 0.555);
+  background-color: rgba(142, 9, 142, 0.555);
   text-align: center;
 }
 .createAccount {
   padding: 1.2rem 0; //2.7
+  color: #fff;
+  font-size: 18px;
   //font-size: 1.7rem;
 }
 .icons {
@@ -78,7 +90,7 @@ main {
   transition: all 0.3s ease-in;
 }
 .borderIcon:hover {
-  background-color: #4a4aee;
+  background-color: #bf09cf; //#4a4aee;
   cursor: pointer;
 }
 .formL input {
@@ -109,6 +121,7 @@ main {
   //margin-top: 3rem;
   font-size: 0.8rem;
   cursor: pointer;
+  color: #74045f;
   //color: #222;
 }
 /*

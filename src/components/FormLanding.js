@@ -16,9 +16,11 @@ function FormLanding() {
       <main className='hero'>
         <div className='containerForm signUp'>
           <div className='welcomeBack'>
-            <div className='message'>
-              <h2>Bienvenido a Diary</h2>
-              <p>Si ya tienes una cuenta por favor inicia sesión aquí</p>
+            <div className='divMessage'>
+              <h2 className='divMessage__text1'>Bienvenido a Diary</h2>
+              <p className='divMessage__text2'>
+                Si ya tienes una cuenta por favor inicia sesión aquí
+              </p>
               <button className='signUpBtn'>Iniciar sesión</button>
             </div>
           </div>
@@ -43,9 +45,11 @@ function FormLanding() {
         </div>
         <div className='containerForm signIn'>
           <div className='welcomeBack'>
-            <div className='message'>
-              <h2>Bienvenido de nuevo</h2>
-              <p>Si aún no tienes una cuenta por favor registrese aquí</p>
+            <div className='divMessage'>
+              <h2 className='divMessage__text1'>Bienvenido de nuevo</h2>
+              <p className='divMessage__text2'>
+                Si aún no tienes una cuenta por favor registrese aquí
+              </p>
               <button className='signInBtn'>Registrarse</button>
             </div>
           </div>
