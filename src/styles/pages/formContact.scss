@@ -47,8 +47,16 @@
   transition: 0.5s;
 }
 
-.input:focus ~ label,
-input:valid ~ label {
+/*
+input:focus ~ label,
+input[value] {
+  top: -5px;
+}
+*/
+
+input:focus ~ label,
+input:valid ~ label,
+input[type='email'] ~ label {
   top: -5px;
 }
 

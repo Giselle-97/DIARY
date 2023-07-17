@@ -21,7 +21,7 @@ function FormContact() {
           </div>
 
           <div className='divInputC'>
-            <input type='email' required />
+            <input type='text' required />
             <label className='lblEmail'>
               <span className='textEmail'>Correo eletrónico</span>
             </label>

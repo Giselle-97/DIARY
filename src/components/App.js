@@ -3,7 +3,7 @@ import Landing from './pages/Landing';
 import Home from './pages/Home';
 import Diary from './pages/Diary';
 import Notes from './pages/Notes';
-import Calendar from './pages/Calendar';
+import MyCalendar from './pages/MyCalendar';
 import Contact from './pages/Contact';
 import Settings from './pages/Settings';
 //import imgDiary from '../images/logo.png';
@@ -23,7 +23,7 @@ function App() {
         <Route path='/home' element={<Home></Home>} />
         <Route path='/diary' element={<Diary></Diary>} />
         <Route path='/notes' element={<Notes></Notes>} />
-        <Route path='/calendar' element={<Calendar></Calendar>} />
+        <Route path='/calendar' element={<MyCalendar></MyCalendar>} />
         <Route path='/contact' element={<Contact></Contact>} />
         <Route path='/settings' element={<Settings></Settings>} />
       </Routes>
