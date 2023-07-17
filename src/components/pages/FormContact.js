@@ -4,7 +4,11 @@ function FormContact() {
   return (
     <div className='containerFormC'>
       <div className='form-box'>
-        <form className='formContact'>
+        <form
+          action='https://formsubmit.co/gisellecuba10@gmail.com'
+          method='POST'
+          className='formContact'
+        >
           <h2 className='titleDateContact'>Datos de Contacto</h2>
           <div className='divInputC'>
             <input type='text' required />
@@ -21,14 +25,14 @@ function FormContact() {
           </div>
 
           <div className='divInputC'>
-            <input type='text' required />
+            <input type='email' required />
             <label className='lblEmail'>
               <span className='textEmail'>Correo eletrónico</span>
             </label>
           </div>
 
           <div className='divInputC'>
-            <input type='phone' required />
+            <input type='tel' required />
             <label className='lblPhone'>
               <span className='textPhone'>Teléfono</span>
             </label>
