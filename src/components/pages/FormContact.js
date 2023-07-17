@@ -3,45 +3,27 @@ import '../../styles/pages/formContact.scss';
 function FormContact() {
   return (
     <div className='containerFormC'>
-      <div className='form-box'>
-        <form className='formContact'>
-          <h2 className='titleDateContact'>Datos de Contacto</h2>
-          <div className='divInputC'>
-            <input type='text' required />
-            <label className='lblName'>
-              <span className='textName'>Nombre</span>
-            </label>
-          </div>
+      <form className='formContact' autoComplete='off'>
+        <h2 className='titleDateContact'>Datos de Contacto</h2>
+        <div className='divInputC'>
+          <input type='text' name='name' placeholder='Nombre' />
 
-          <div className='divInputC'>
-            <input type='text' required />
-            <label className='lblLastName'>
-              <span className='textLastName'>Apellidos</span>
-            </label>
-          </div>
+          <input type='text' name='lastname' placeholder='Apellidos' />
 
-          <div className='divInputC'>
-            <input type='email' required />
-            <label className='lblEmail'>
-              <span className='textEmail'>Correo eletrónico</span>
-            </label>
-          </div>
+          <input type='email' name='email' placeholder='Correo Electrónico' />
 
-          <div className='divInputC'>
-            <input type='phone' required />
-            <label className='lblPhone'>
-              <span className='textPhone'>Teléfono</span>
-            </label>
-          </div>
+          <input type='tel' name='phone' placeholder='Teléfono' />
 
-          <div className='divInputC'>
-            <input type='questions' required />
-            <label className='lblQuestions'>
-              <span className='textQuestions'>¿En qué le puedo ayudar?</span>
-            </label>
-          </div>
-        </form>
-      </div>
+          <textarea
+            name='message'
+            cols='30'
+            rows='5'
+            placeholder='Mensaje'
+            sentences
+          ></textarea>
+          <input className='btnContact' type='submit' name='' value='Enviar' />
+        </div>
+      </form>
     </div>
   );
 }
