@@ -1,31 +1,42 @@
 import '../styles/pages/formLanding.scss';
+import React, { useState } from 'react';
 import imgInstagram from '../images/instagram.png';
 import imgFacebook from '../images/facebook.png';
 import imgLinkedin from '../images/linkedin.png';
 
 function FormLanding() {
-  /*EVENTO CLIK
-  hay que traer btnregistro, btn iniciar s, contenedor registro, contenedor inicar sesión"
-  if(e.target===$btnSingIn || e.target === $btnSingUp){
-    $singIn.classList.toggle('active);
-    $sinUp.classList.toggle('active')
-  }
-  */
+  const [showLoginForm, setShowLoginForm] = useState(false);
+
+  const handleToggleForm = () => {
+    setShowLoginForm(!showLoginForm);
+  };
+
   return (
     <div className='containerLanding'>
       <main className='hero'>
-        <div className='containerForm signUp'>
+        <div className={`containerForm ${showLoginForm ? 'signIn' : 'signUp'}`}>
           <div className='welcomeBack'>
             <div className='divMessage'>
-              <h2 className='divMessage__text1'>Bienvenido a Diary</h2>
+              <h2 className='divMessage__text1'>
+                {showLoginForm ? 'Bienvenido de nuevo' : 'Bienvenido a Diary'}
+              </h2>
               <p className='divMessage__text2'>
-                Si ya tienes una cuenta por favor inicia sesión aquí
+                {showLoginForm
+                  ? 'Si aún no tienes una cuenta por favor regístrate aquí'
+                  : 'Si ya tienes una cuenta por favor inicia sesión aquí'}
               </p>
-              <button className='signUpBtn'>Iniciar sesión</button>
+              <button
+                className={showLoginForm ? 'signInBtn' : 'signUpBtn'}
+                onClick={handleToggleForm}
+              >
+                {showLoginForm ? 'Registrarse' : 'Iniciar sesión'}
+              </button>
             </div>
           </div>
           <form className='formL'>
-            <p className='createAccount'>Crear una cuenta</p>
+            <p className='createAccount'>
+              {showLoginForm ? 'Iniciar sesión' : 'Crear una cuenta'}
+            </p>
             <div className='icons'>
               <div className='borderIcon iconInstagram'>
                 <img src={imgInstagram} alt='logo instagram' className='icon' />
@@ -37,39 +48,14 @@ function FormLanding() {
                 <img src={imgLinkedin} alt='logo linkedin' className='icon' />
               </div>
             </div>
-            <input type='text' placeholder='name' />
+            {!showLoginForm && <input type='text' placeholder='name' />}
             <input type='email' placeholder='email' />
             <input type='password' placeholder='password' />
-            <input type='button' value='Registrarse' className='inputBtn' />
-          </form>
-        </div>
-        <div className='containerForm signIn'>
-          <div className='welcomeBack'>
-            <div className='divMessage'>
-              <h2 className='divMessage__text1'>Bienvenido de nuevo</h2>
-              <p className='divMessage__text2'>
-                Si aún no tienes una cuenta por favor registrese aquí
-              </p>
-              <button className='signInBtn'>Registrarse</button>
-            </div>
-          </div>
-          <form className='formL'>
-            <p className='createAccount'>Iniciar sesión</p>
-            <div className='icons'>
-              <div className='borderIcon iconInstagram'>
-                <img src={imgInstagram} alt='logo instagram' className='icon' />
-              </div>
-              <div className='borderIcon iconFacebook'>
-                <img src={imgFacebook} alt='logo facebook' className='icon' />
-              </div>
-              <div className='borderIcon iconLinkedin'>
-                <img src={imgLinkedin} alt='logo linkedin' className='icon' />
-              </div>
-            </div>
-
-            <input type='email' placeholder='email' />
-            <input type='password' placeholder='password' />
-            <input type='button' value='Iniciar sesión' className='inputBtn' />
+            <input
+              type='button'
+              value={showLoginForm ? 'Iniciar sesión' : 'Registrarse'}
+              className='inputBtn'
+            />
           </form>
         </div>
       </main>

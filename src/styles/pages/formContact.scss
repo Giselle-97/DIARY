@@ -31,13 +31,14 @@
 input,
 textarea {
   background-color: #79527f;
+  font-size: 12px;
   padding: 10px;
   margin-bottom: 15px;
   border: 0;
   color: #fff;
 }
 
-::placeholder {
+.inputContact::placeholder {
   color: #bfc9f3;
 }
 :focus {

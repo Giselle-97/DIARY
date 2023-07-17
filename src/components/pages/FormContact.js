@@ -6,15 +6,36 @@ function FormContact() {
       <form className='formContact' autoComplete='off'>
         <h2 className='titleDateContact'>Datos de Contacto</h2>
         <div className='divInputC'>
-          <input type='text' name='name' placeholder='Nombre' />
+          <input
+            className='inputContact'
+            type='text'
+            name='name'
+            placeholder='Nombre'
+          />
 
-          <input type='text' name='lastname' placeholder='Apellidos' />
+          <input
+            type='text'
+            className='inputContact'
+            name='lastname'
+            placeholder='Apellidos'
+          />
 
-          <input type='email' name='email' placeholder='Correo Electrónico' />
+          <input
+            type='email'
+            className='inputContact'
+            name='email'
+            placeholder='Correo Electrónico'
+          />
 
-          <input type='tel' name='phone' placeholder='Teléfono' />
+          <input
+            type='tel'
+            className='inputContact'
+            name='phone'
+            placeholder='Teléfono'
+          />
 
           <textarea
+            className='inputContact'
             name='message'
             cols='30'
             rows='5'
