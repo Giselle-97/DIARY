@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import LocalStorage from '../services/LocalStorage';
 
-function ToDoList() {
+function ToDoListDiary() {
   const [tasks, setTasks] = useState([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
   const [newTaskDescription, setNewTaskDescription] = useState('');
@@ -239,8 +240,9 @@ function ToDoList() {
       </div>
       <div>{renderTasks()}</div>
       {renderEditingTask()}
+      <LocalStorage tasks={tasks} setTasks={setTasks} />
     </div>
   );
 }
 
-export default ToDoList;
+export default ToDoListDiary;
