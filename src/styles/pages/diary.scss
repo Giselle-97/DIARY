@@ -1,3 +1,14 @@
 @import '../core/variables';
 
 //@mdbootstrap/react-to-do-list
+.containerDiary {
+  background: linear-gradient(70deg, rgb(116, 4, 95), rgb(243, 159, 219));
+}
+.boxListDiary {
+  background-color: rgba(113, 87, 113, 0.555);
+  padding: 20px 25px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}

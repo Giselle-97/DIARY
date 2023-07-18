@@ -5,14 +5,16 @@ import ToDoListDiary from '../pages/ToDoListDiary';
 
 function Diary() {
   return (
-    <>
+    <div className='containerDiary'>
       <Header />
       <div>
         <p className='text_diary'>365 días y un millón de planes..</p>
       </div>
-      <ToDoListDiary />
+      <div className='boxListDiary'>
+        <ToDoListDiary />
+      </div>
       <Footer />
-    </>
+    </div>
   );
 }
 export default Diary;

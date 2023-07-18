@@ -1,41 +1,19 @@
 import React, { useState } from 'react';
+import ToDoForm from './ToDoForm';
+import ToDoList from './ToDoList';
 import LocalStorage from '../services/LocalStorage';
 
 function ToDoListDiary() {
   const [tasks, setTasks] = useState([]);
-  const [newTaskTitle, setNewTaskTitle] = useState('');
-  const [newTaskDescription, setNewTaskDescription] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [selectedPriority, setSelectedPriority] = useState('');
-  const [searchTerm, setSearchTerm] = useState('');
   const [editingTask, setEditingTask] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const addTask = () => {
-    if (newTaskTitle.trim() === '') {
-      return;
-    }
-
-    const newTask = {
-      id: Date.now(),
-      title: newTaskTitle,
-      description: newTaskDescription,
-      category: selectedCategory,
-      priority: selectedPriority,
-      completed: false,
-      createdAt: new Date(),
-      updatedAt: null,
-    };
-
-    if (selectedPriority === 'alta') {
+  const addTask = (newTask) => {
+    if (newTask.priority === 'alta') {
       setTasks([newTask, ...tasks]);
     } else {
       setTasks([...tasks, newTask]);
     }
-
-    setNewTaskTitle('');
-    setNewTaskDescription('');
-    setSelectedCategory('');
-    setSelectedPriority('');
   };
 
   const deleteTask = (taskId) => {
@@ -55,18 +33,6 @@ function ToDoListDiary() {
         return task;
       })
     );
-  };
-
-  const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
-  };
-
-  const handlePriorityChange = (e) => {
-    setSelectedPriority(e.target.value);
-  };
-
-  const handleSearchTermChange = (e) => {
-    setSearchTerm(e.target.value);
   };
 
   const handleEditTask = (task) => {
@@ -92,6 +58,10 @@ function ToDoListDiary() {
     setEditingTask(null);
   };
 
+  const handleSearchTermChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   const filteredTasks = tasks.filter((task) =>
     task.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -105,35 +75,6 @@ function ToDoListDiary() {
       return b.updatedAt - a.updatedAt;
     }
   });
-
-  const renderTasks = () => {
-    return sortedTasks.map((task) => (
-      <div
-        key={task.id}
-        className={`task ${task.completed ? 'completed' : ''}`}
-      >
-        <input
-          type='checkbox'
-          checked={task.completed}
-          onChange={() => toggleTaskCompletion(task.id)}
-        />
-        <div className='task-info'>
-          <h3>{task.title}</h3>
-          <p>{task.description}</p>
-          <span className='category'>{task.category}</span>
-          <span className='priority'>{task.priority}</span>
-          <span className='date'>
-            Creada: {formatDate(task.createdAt)}
-            {task.updatedAt && (
-              <span>, Actualizada: {formatDate(task.updatedAt)}</span>
-            )}
-          </span>
-        </div>
-        <button onClick={() => deleteTask(task.id)}>Eliminar</button>
-        <button onClick={() => handleEditTask(task)}>Editar</button>
-      </div>
-    ));
-  };
 
   const renderEditingTask = () => {
     if (editingTask === null) {
@@ -151,85 +92,18 @@ function ToDoListDiary() {
             setEditingTask({ ...editingTask, title: e.target.value })
           }
         />
-        <input
-          type='text'
-          placeholder='Descripción de la tarea'
-          value={editingTask.description}
-          onChange={(e) =>
-            setEditingTask({ ...editingTask, description: e.target.value })
-          }
-        />
-        <select
-          value={editingTask.category}
-          onChange={(e) =>
-            setEditingTask({ ...editingTask, category: e.target.value })
-          }
-        >
-          <option value=''>Seleccione una categoría</option>
-          <option value='Trabajo'>Trabajo</option>
-          <option value='Estudio'>Estudio</option>
-          <option value='Compras'>Compras</option>
-          <option value='Gimnasio'>Gimnasio</option>
-        </select>
-        <select
-          value={editingTask.priority}
-          onChange={(e) =>
-            setEditingTask({ ...editingTask, priority: e.target.value })
-          }
-        >
-          <option value=''>Seleccione una prioridad</option>
-          <option value='alta'>Alta</option>
-          <option value='media'>Media</option>
-          <option value='baja'>Baja</option>
-        </select>
-        <button onClick={() => handleSaveTask(editingTask)}>Guardar</button>
+        <button onClick={handleSaveTask.bind(null, editingTask)}>
+          Guardar
+        </button>
         <button onClick={handleCancelEdit}>Cancelar</button>
       </div>
     );
   };
 
-  const formatDate = (date) => {
-    const options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-    };
-    return new Date(date).toLocaleDateString(undefined, options);
-  };
-
   return (
     <div>
       <h1>Lista de Tareas</h1>
-      <div>
-        <input
-          type='text'
-          placeholder='Título de la tarea'
-          value={newTaskTitle}
-          onChange={(e) => setNewTaskTitle(e.target.value)}
-        />
-        <input
-          type='text'
-          placeholder='Descripción de la tarea'
-          value={newTaskDescription}
-          onChange={(e) => setNewTaskDescription(e.target.value)}
-        />
-        <select value={selectedCategory} onChange={handleCategoryChange}>
-          <option value=''>Seleccione una categoría</option>
-          <option value='Trabajo'>Trabajo</option>
-          <option value='Estudio'>Estudio</option>
-          <option value='Compras'>Compras</option>
-          <option value='Gimnasio'>Gimnasio</option>
-        </select>
-        <select value={selectedPriority} onChange={handlePriorityChange}>
-          <option value=''>Seleccione una prioridad</option>
-          <option value='alta'>Alta</option>
-          <option value='media'>Media</option>
-          <option value='baja'>Baja</option>
-        </select>
-        <button onClick={addTask}>Añadir tarea</button>
-      </div>
+      <ToDoForm addTask={addTask} />
       <div>
         <input
           type='text'
@@ -238,7 +112,12 @@ function ToDoListDiary() {
           onChange={handleSearchTermChange}
         />
       </div>
-      <div>{renderTasks()}</div>
+      <ToDoList
+        tasks={sortedTasks}
+        toggleTaskCompletion={toggleTaskCompletion}
+        deleteTask={deleteTask}
+        handleEditTask={handleEditTask}
+      />
       {renderEditingTask()}
       <LocalStorage tasks={tasks} setTasks={setTasks} />
     </div>
