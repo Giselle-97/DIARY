@@ -1,155 +1,145 @@
-import React, { useState, useEffect } from 'react';
-import emailjs from 'emailjs-com';
-import '../../styles/pages/toDoListDiary.scss';
+import React, { useState } from 'react';
 
-function ToDoListDiary() {
+function ToDoList() {
   const [tasks, setTasks] = useState([]);
-  const [selectedColor, setSelectedColor] = useState('#000000');
-  const [selectedBackground, setSelectedBackground] = useState('background-1');
+  const [newTaskTitle, setNewTaskTitle] = useState('');
+  const [newTaskDescription, setNewTaskDescription] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedPriority, setSelectedPriority] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-  const [tags, setTags] = useState([]);
-  const [notificationEmail, setNotificationEmail] = useState('');
 
-  useEffect(() => {
-    // Configura tu cuenta de EmailJS
-    emailjs.init('user_yourUserID');
-  }, []);
+  const addTask = () => {
+    if (newTaskTitle.trim() === '') {
+      return; // Evita agregar tareas vacías
+    }
 
-  const addTask = (task) => {
-    setTasks([...tasks, task]);
-  };
+    const newTask = {
+      id: Date.now(),
+      title: newTaskTitle,
+      description: newTaskDescription,
+      category: selectedCategory,
+      priority: selectedPriority,
+      completed: false,
+      date: new Date(),
+    };
 
-  const completeTask = (taskId) => {
-    setTasks(
-      tasks.map((task) => {
-        if (task.id === taskId) {
-          return { ...task, completed: true };
-        }
-        return task;
-      })
-    );
+    if (selectedPriority === 'alta') {
+      setTasks([newTask, ...tasks]);
+    } else {
+      setTasks([...tasks, newTask]);
+    }
+
+    setNewTaskTitle('');
+    setNewTaskDescription('');
+    setSelectedCategory('');
+    setSelectedPriority('');
   };
 
   const deleteTask = (taskId) => {
     setTasks(tasks.filter((task) => task.id !== taskId));
   };
 
-  const editTask = (taskId, updatedTask) => {
+  const toggleTaskCompletion = (taskId) => {
     setTasks(
       tasks.map((task) => {
         if (task.id === taskId) {
-          return { ...task, ...updatedTask };
+          return { ...task, completed: !task.completed };
         }
         return task;
       })
     );
   };
 
-  const filterTasks = (task) => {
-    if (searchTerm === '') {
-      return true;
-    }
-    return task.title.toLowerCase().includes(searchTerm.toLowerCase());
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
   };
 
-  const sortedTasks = tasks.sort((a, b) => {
-    if (a.priority && !b.priority) return -1;
-    if (!a.priority && b.priority) return 1;
-    return new Date(b.date) - new Date(a.date);
+  const handlePriorityChange = (e) => {
+    setSelectedPriority(e.target.value);
+  };
+
+  const handleSearchTermChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredTasks = tasks.filter((task) =>
+    task.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const sortedTasks = filteredTasks.sort((a, b) => {
+    if (a.priority === 'alta' && b.priority !== 'alta') {
+      return -1; // Prioridad 'alta' primero
+    } else if (a.priority !== 'alta' && b.priority === 'alta') {
+      return 1; // Prioridad 'alta' después
+    } else {
+      return b.date - a.date; // Orden por fecha
+    }
   });
 
-  const renderTags = () => {
-    return tags.map((tag) => (
-      <span key={tag} className='tag'>
-        {tag}
-      </span>
-    ));
-  };
-
-  const sendNotificationEmail = () => {
-    // Lógica para enviar el correo electrónico de notificación
-    const templateParams = {
-      from_name: 'Your Name',
-      to_name: 'Recipient Name',
-      message: 'This is a reminder for your task',
-    };
-    emailjs
-      .send('your_service_id', 'your_template_id', templateParams)
-      .then((result) => {
-        console.log('Email sent successfully:', result.text);
-      })
-      .catch((error) => {
-        console.log('Email sending failed:', error);
-      });
-  };
-
-  const handleEmailChange = (e) => {
-    setNotificationEmail(e.target.value);
-  };
-
   const renderTasks = () => {
-    return sortedTasks.filter(filterTasks).map((task) => (
+    return sortedTasks.map((task) => (
       <div
         key={task.id}
         className={`task ${task.completed ? 'completed' : ''}`}
       >
-        <h3>{task.title}</h3>
-        <p>{task.description}</p>
-        <div className='tags'>{renderTags()}</div>
-        <button onClick={() => completeTask(task.id)}>Completar</button>
+        <input
+          type='checkbox'
+          checked={task.completed}
+          onChange={() => toggleTaskCompletion(task.id)}
+        />
+        <div className='task-info'>
+          <h3>{task.title}</h3>
+          <p>{task.description}</p>
+          <span className='category'>{task.category}</span>
+          <span className='priority'>{task.priority}</span>
+        </div>
         <button onClick={() => deleteTask(task.id)}>Eliminar</button>
-        <button onClick={() => editTask(task.id, { title: 'Nuevo título' })}>
-          Editar
-        </button>
       </div>
     ));
   };
 
   return (
-    <div className={`todo-list ${selectedBackground}`}>
+    <div>
       <h1>Lista de Tareas</h1>
-      <div className='search-bar'>
+      <div>
+        <input
+          type='text'
+          placeholder='Título de la tarea'
+          value={newTaskTitle}
+          onChange={(e) => setNewTaskTitle(e.target.value)}
+        />
+        <input
+          type='text'
+          placeholder='Descripción de la tarea'
+          value={newTaskDescription}
+          onChange={(e) => setNewTaskDescription(e.target.value)}
+        />
+        <select value={selectedCategory} onChange={handleCategoryChange}>
+          <option value=''>Seleccione una categoría</option>
+          <option value='Trabajo'>Trabajo</option>
+          <option value='Estudio'>Estudio</option>
+          <option value='Compras'>Compras</option>
+          <option value='Gimnasio'>Gimnasio</option>
+        </select>
+        <select value={selectedPriority} onChange={handlePriorityChange}>
+          <option value=''>Seleccione una prioridad</option>
+          <option value='alta'>Alta</option>
+          <option value='media'>Media</option>
+          <option value='baja'>Baja</option>
+        </select>
+        <button onClick={addTask}>Añadir tarea</button>
+      </div>
+      <div>
         <input
           type='text'
           placeholder='Buscar por título'
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={handleSearchTermChange}
         />
       </div>
-      <div className='task-list'>{renderTasks()}</div>
-      <div className='settings'>
-        <h3>Configuración</h3>
-        <label>
-          Color de fuente:
-          <input
-            type='color'
-            value={selectedColor}
-            onChange={(e) => setSelectedColor(e.target.value)}
-          />
-        </label>
-        <label>
-          Fondo de papel:
-          <select
-            value={selectedBackground}
-            onChange={(e) => setSelectedBackground(e.target.value)}
-          >
-            <option value='background-1'>Fondo 1</option>
-            <option value='background-2'>Fondo 2</option>
-            {/* Agrega más opciones de fondos de papel según tus necesidades */}
-          </select>
-        </label>
-        <label>
-          Correo electrónico de notificación:
-          <input
-            type='email'
-            value={notificationEmail}
-            onChange={handleEmailChange}
-          />
-        </label>
-        <button onClick={sendNotificationEmail}>Enviar Notificación</button>
-      </div>
+      <div>{renderTasks()}</div>
     </div>
   );
 }
 
-export default ToDoListDiary;
+export default ToDoList;
