@@ -1,5 +1,4 @@
 import React from 'react';
-
 import ToDoTask from './ToDoTask';
 
 function ToDoList({ tasks, toggleTaskCompletion, deleteTask, handleEditTask }) {
