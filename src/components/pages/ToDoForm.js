@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../styles/pages/toDoForm.scss';
 
 function ToDoForm({ addTask }) {
   const [newTaskTitle, setNewTaskTitle] = useState('');
@@ -47,33 +48,42 @@ function ToDoForm({ addTask }) {
   };
 
   return (
-    <div>
-      <input
-        type='text'
-        placeholder='Título de la tarea'
-        value={newTaskTitle}
-        onChange={handleNewTaskTitleChange}
-      />
-      <input
-        type='text'
-        placeholder='Descripción de la tarea'
-        value={newTaskDescription}
-        onChange={handleNewTaskDescriptionChange}
-      />
-      <select value={selectedCategory} onChange={handleCategoryChange}>
-        <option value=''>Seleccione una categoría</option>
-        <option value='Trabajo'>Trabajo</option>
-        <option value='Estudio'>Estudio</option>
-        <option value='Compras'>Compras</option>
-        <option value='Gimnasio'>Gimnasio</option>
-      </select>
-      <select value={selectedPriority} onChange={handlePriorityChange}>
-        <option value=''>Seleccione una prioridad</option>
-        <option value='alta'>Alta</option>
-        <option value='media'>Media</option>
-        <option value='baja'>Baja</option>
-      </select>
-      <button onClick={handleSubmit}>Añadir tarea</button>
+    <div className='containerToDoForm'>
+      <div className='boxToDoForm2'>
+        <div className='boxFormList'>
+          <input
+            className='inputTaskTitle'
+            type='text'
+            placeholder='Título de la tarea'
+            value={newTaskTitle}
+            onChange={handleNewTaskTitleChange}
+          />
+          <input
+            className='inputTaskDesc'
+            type='text'
+            placeholder='Descripción de la tarea'
+            value={newTaskDescription}
+            onChange={handleNewTaskDescriptionChange}
+          />
+        </div>
+        <div className='boxSelect'>
+          <select value={selectedCategory} onChange={handleCategoryChange}>
+            <option value=''>Categoría</option>
+            <option value='Trabajo'>Trabajo</option>
+            <option value='Estudio'>Estudio</option>
+            <option value='Compras'>Compras</option>
+            <option value='Gimnasio'>Gimnasio</option>
+            <option value='Otros'>Otros</option>
+          </select>
+          <select value={selectedPriority} onChange={handlePriorityChange}>
+            <option value=''>Prioridad</option>
+            <option value='alta'>Alta</option>
+            <option value='media'>Media</option>
+            <option value='baja'>Baja</option>
+          </select>
+        </div>
+        <button onClick={handleSubmit}>Añadir tarea</button>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import '../../styles/pages/home.scss';
-import { Link } from 'react-router-dom';
-import imgLogo from '../../images/Giselle.png';
 import Header from '../Header';
+import Footer from '../Footer';
 
 function Home() {
   return (
@@ -21,16 +20,7 @@ function Home() {
           </p>
         </div>
       </main>
-      <footer className='footerHome'>
-        <div className='divFooter'>
-          <nav>
-            <Link className='divFooter__btn' to='/contact'>
-              Contacto
-            </Link>
-          </nav>
-          <img className='divFooter__img' src={imgLogo} alt='logo' />
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

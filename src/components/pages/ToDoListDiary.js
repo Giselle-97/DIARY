@@ -3,8 +3,8 @@ import ToDoForm from './ToDoForm';
 import ToDoList from './ToDoList';
 import EditTaskForm from './EditTaskForm';
 import LocalStorage from '../services/LocalStorage';
-
 import '../../styles/pages/toDoListDiary.scss';
+import TaskFilter from './TaskFilter';
 
 function ToDoListDiary() {
   const [tasks, setTasks] = useState([]);
@@ -82,6 +82,7 @@ function ToDoListDiary() {
   return (
     <div>
       <h1>Lista de Tareas</h1>
+      <TaskFilter />
       <ToDoForm addTask={addTask} />
       <div>
         <input

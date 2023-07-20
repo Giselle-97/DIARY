@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/pages/taskFilter.scss';
 
 function TaskFilter({ onFilterChange }) {
   const handleFilterChange = (e) => {
@@ -7,8 +8,9 @@ function TaskFilter({ onFilterChange }) {
   };
 
   return (
-    <div>
+    <div className='boxFilter'>
       <input
+        className='inputFilter'
         type='text'
         placeholder='Buscar por título'
         onChange={handleFilterChange}

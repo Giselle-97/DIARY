@@ -6,9 +6,6 @@ import Notes from './pages/Notes';
 import MyCalendar from './pages/MyCalendar';
 import Contact from './pages/Contact';
 import Settings from './pages/Settings';
-//import imgDiary from '../images/logo.png';
-//import imgLogo from '../images/giselle-logo.png';
-//import { Link } from 'react-router-dom';
 import '../styles/App.scss';
 
 function App() {

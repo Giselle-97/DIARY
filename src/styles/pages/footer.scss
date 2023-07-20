@@ -1,5 +1,8 @@
 @import '../core/variables';
+
 .divFooter {
+  background: -webkit-linear-gradient(left, #0e0474, #3952f2, #39eef2);
+  padding: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;

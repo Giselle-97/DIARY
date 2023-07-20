@@ -4,15 +4,12 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  //mediumturquoise;
 }
 
 .containerForm {
-  width: 90%;
-  //height: 90vh;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  //justify-content: space-around;
   transition: all 0.5s ease-out;
 }
 .welcomeBack {
@@ -24,74 +21,73 @@ main {
   padding: 1rem;
 }
 .divMessage__text1 {
-  //font-size: 1.7rem;
-  padding: 1rem 0;
-  color: #74045f;
+  padding-bottom: 5px;
+  color: black;
 }
 .divMessage__text1:hover {
-  color: #bf09cf;
+  color: #071aac;
 }
 .divMessage__text2 {
-  color: #74045f;
+  color: black;
+  padding-bottom: 20px;
 }
 .divMessage__text2:hover {
-  color: #bf09cf;
+  color: #071aac;
 }
 .divMessage button {
-  //padding: 1rem;
   font-weight: 400;
-  background: #74045f; //#4a4aee;
+  background: #0707f0;
+  padding: 5px 10px;
   border-radius: 2rem;
   border: none;
   outline: none;
   cursor: pointer;
-  //font-size: 0.9rem;
-  margin-top: 2rem;
   transition: all 0.3s ease-in;
   color: #fff;
 }
 .divMessage button:hover {
-  background-color: #f12eb9; //#6464f8;
+  background: #0707f0ab;
 }
 .formL {
-  //width: 400px;
-  padding: 1rem;
-  //margin: 2rem;
-  background-color: rgba(142, 9, 142, 0.555);
+  padding: 1rem 1rem 2rem 1rem;
+  border-radius: 10px;
+  background-color: rgba(37, 26, 196, 0.614);
   text-align: center;
 }
 .createAccount {
-  padding: 1.2rem 0; //2.7
+  padding: 1.2rem 0;
   color: #fff;
   font-size: 18px;
-  //font-size: 1.7rem;
 }
 .icons {
   width: 200px;
   display: flex;
   justify-content: space-around;
   margin: auto;
-  margin-bottom: 15px;
+  padding-bottom: 25px;
 }
 .icon {
-  width: 20px; //40px
+  width: 20px;
   height: 20px;
 }
 .borderIcon {
-  height: 10px; //20px
+  height: 10px;
   width: 10px;
+  background-color: #f3fffe;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem; //1.5
+  padding: 1rem;
   border: solid thin #fff;
   border-radius: 50%;
   font-size: 1.5rem;
   transition: all 0.3s ease-in;
 }
 .borderIcon:hover {
-  background-color: #bf09cf; //#4a4aee;
+  background-color: #8df3f6;
+  transition: all 0.2s ease-in;
   cursor: pointer;
+  border: solid thin #8df3f6;
 }
 .formL input {
   width: 70%;
@@ -105,24 +101,27 @@ main {
   outline: none;
   padding: 0.2rem 0;
   font-size: 0.9rem;
-  //color: #fff;
 }
 input::placeholder {
-  color: #4a4aee;
+  color: white;
 }
 .formL .inputBtn {
   width: 60%;
   margin: auto;
   border: solid thin white;
-  //padding: 0.7rem;
+  padding: 5px;
   border-radius: 2rem;
   background-color: #fff;
   font-weight: 600;
-  //margin-top: 3rem;
   font-size: 0.8rem;
   cursor: pointer;
-  color: #74045f;
-  //color: #222;
+  color: #170474;
+}
+
+.formL .inputBtn:hover {
+  background-color: #cbf6f8;
+  border: solid thin #cbf6f8;
+  transition: all 0.2s ease-in;
 }
 /*
 .signIn {
