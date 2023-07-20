@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
-import ToDoListDiary from '../pages/ToDoListDiary';
-import '../../styles/pages/diary.scss';
+import Header from '../../Header';
+import Footer from '../../Footer';
+import ToDoListDiary from './ToDoListDiary';
+import '../../../styles/pages/diary.scss';
 
 function Diary() {
   return (

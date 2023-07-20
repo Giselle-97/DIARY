@@ -1,7 +1,12 @@
 @import '../core/variables';
 
-.boxToDoTask {
+.containerToDoTask {
+  margin-bottom: 10px;
   border: solid 2px rgb(159, 159, 235);
+}
+.boxToDoTask {
+  padding: 15px 0 15px 0;
+  border-radius: 3px;
 }
 .taskInfo {
   display: flex;
@@ -9,5 +14,13 @@
 }
 .boxToDoTask2 {
   width: 70%;
+  display: flex;
+}
+.boxBtnToDoTask {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+.task {
   display: flex;
 }

@@ -1,7 +1,7 @@
-import '../../styles/pages/landing.scss';
-import imgDiary from '../../images/222.png';
-import FormLanding from '../FormLanding';
-import Footer from '../Footer';
+import '../../../styles/pages/landing.scss';
+import imgDiary from '../../../images/222.png';
+import FormLanding from './FormLanding';
+import Footer from '../../Footer';
 
 function Landing() {
   return (

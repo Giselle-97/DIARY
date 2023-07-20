@@ -1,3 +1,18 @@
+@import '../core/variables';
+
+.boxFilter {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.inputFilter {
+  border: solid 2px blue;
+}
+.inputFilter::placeholder {
+  color: blue;
+}
+
 /*
 
 import React, { useState } from 'react';

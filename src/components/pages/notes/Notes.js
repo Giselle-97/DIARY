@@ -1,9 +1,9 @@
-import '../../styles/pages/notes.scss';
+import '../../../styles/pages/notes.scss';
 import { useState, useEffect } from 'react';
 import NoteList from './NoteList';
 import NoteEditor from './NoteEditor';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from '../../Header';
+import Footer from '../../Footer';
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);

@@ -1,11 +1,11 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Landing from './pages/Landing';
-import Home from './pages/Home';
-import Diary from './pages/Diary';
-import Notes from './pages/Notes';
-import MyCalendar from './pages/MyCalendar';
-import Contact from './pages/Contact';
-import Settings from './pages/Settings';
+import Landing from './pages/landing/Landing';
+import Home from './pages/home/Home';
+import Diary from './pages/diary/Diary';
+import Notes from './pages/notes/Notes';
+import MyCalendar from './pages/calendar/MyCalendar';
+import Contact from './pages/contact/Contact';
+import Settings from './pages/settings/Settings';
 import '../styles/App.scss';
 
 function App() {

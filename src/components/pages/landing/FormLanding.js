@@ -1,8 +1,8 @@
-import '../styles/pages/formLanding.scss';
+import '../../../styles/pages/formLanding.scss';
 import React, { useState } from 'react';
-import imgInstagram from '../images/instagram.png';
-import imgFacebook from '../images/facebook.png';
-import imgLinkedin from '../images/linkedin.png';
+import imgInstagram from '../../../images/instagram.png';
+import imgFacebook from '../../../images/facebook.png';
+import imgLinkedin from '../../../images/linkedin.png';
 
 function FormLanding() {
   const [showLoginForm, setShowLoginForm] = useState(false);

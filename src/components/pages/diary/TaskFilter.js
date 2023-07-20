@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import '../../styles/pages/taskFilter.scss';
 
 function TaskFilter({ onFilterChange }) {
@@ -20,3 +20,4 @@ function TaskFilter({ onFilterChange }) {
 }
 
 export default TaskFilter;
+*/

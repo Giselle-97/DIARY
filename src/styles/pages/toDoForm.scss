@@ -20,10 +20,25 @@
 }
 .inputTaskDesc {
   height: 80px;
+  border-radius: 5px;
 }
 .inputTaskDesc::placeholder {
   color: blue;
 }
 .boxSelect {
   display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.boxBtnAddTask {
+  display: flex;
+  justify-content: center;
+}
+.btnAddTask {
+  background-color: rgb(111, 244, 240);
+  width: 130px;
+  border: solid 2px rgb(111, 244, 240);
+  border-radius: 15px;
+  padding: 3px 5px;
+  cursor: pointer;
 }

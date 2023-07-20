@@ -1,6 +1,6 @@
-import '../../styles/pages/home.scss';
-import Header from '../Header';
-import Footer from '../Footer';
+import '../../../styles/pages/home.scss';
+import Header from '../../Header';
+import Footer from '../../Footer';
 
 function Home() {
   return (

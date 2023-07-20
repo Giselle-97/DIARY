@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/pages/toDoForm.scss';
+import '../../../styles/pages/toDoForm.scss';
 
 function ToDoForm({ addTask }) {
   const [newTaskTitle, setNewTaskTitle] = useState('');
@@ -82,7 +82,11 @@ function ToDoForm({ addTask }) {
             <option value='baja'>Baja</option>
           </select>
         </div>
-        <button onClick={handleSubmit}>Añadir tarea</button>
+        <div className='boxBtnAddTask'>
+          <button className='btnAddTask' onClick={handleSubmit}>
+            Añadir tarea
+          </button>
+        </div>
       </div>
     </div>
   );

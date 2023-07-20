@@ -1,4 +1,4 @@
-import '../../styles/pages/formContact.scss';
+import '../../../styles/pages/formContact.scss';
 
 function FormContact() {
   return (

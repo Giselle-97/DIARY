@@ -1,6 +1,6 @@
-import '../../styles/pages/mycalendar.scss';
-import Header from '../Header';
-import Footer from '../Footer';
+import '../../../styles/pages/myCalendar.scss';
+import Header from '../../Header';
+import Footer from '../../Footer';
 import { Calendar, dateFnsLocalizer } from 'react-big-calendar';
 import format from 'date-fns/format';
 import parse from 'date-fns/parse';

@@ -1,7 +1,7 @@
-import '../../styles/pages/contact.scss';
+import '../../../styles/pages/contact.scss';
 import FormContact from './FormContact';
-import Footer from '../Footer';
-import Header from '../Header';
+import Footer from '../../Footer';
+import Header from '../../Header';
 
 function Contact() {
   return (

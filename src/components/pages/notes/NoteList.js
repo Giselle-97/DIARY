@@ -1,6 +1,6 @@
 import React from 'react';
 //import './NoteList.scss';
-import OneNote from '../pages/OneNote';
+import OneNote from './OneNote';
 
 const NoteList = ({ notes, onDelete }) => {
   return (
@@ -10,7 +10,6 @@ const NoteList = ({ notes, onDelete }) => {
           key={note.id}
           id={note.id}
           title={note.title}
-          date={note.date}
           priority={note.priority}
           content={note.content}
           onDelete={onDelete}
