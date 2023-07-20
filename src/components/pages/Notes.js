@@ -1,38 +1,47 @@
 import '../../styles/pages/notes.scss';
+import { useState, useEffect } from 'react';
+import NoteList from './NoteList';
+import NoteEditor from './NoteEditor';
 import Header from '../Header';
 import Footer from '../Footer';
 
-function Notes() {
+const Notes = () => {
+  const [notes, setNotes] = useState([]);
+
+  useEffect(() => {
+    const storedNotes = JSON.parse(localStorage.getItem('notes'));
+    if (storedNotes) {
+      setNotes(storedNotes);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('notes', JSON.stringify(notes));
+  }, [notes]);
+
+  const handleAddNote = (newNote) => {
+    if (notes.length < 50) {
+      setNotes([...notes, newNote]);
+    } else {
+      // Puedes mostrar un mensaje de que se ha alcanzado el límite máximo de notas.
+      alert('Se ha alcanzado el límite máximo de notas (50).');
+    }
+  };
+
+  const handleDeleteNote = (id) => {
+    const updatedNotes = notes.filter((note) => note.id !== id);
+    setNotes(updatedNotes);
+  };
+
   return (
-    <div className='containerNotes'>
+    <div className='notes'>
       <Header />
-      <div className='box'>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <div>
-        <p>Aquí va la fecha</p>
-        <form action=''>
-          <select name='' id=''>
-            <option value=''>Fuente</option>
-            <option value=''>Estilos</option>
-            <option value=''>Stikers</option>
-          </select>
-        </form>
-        <p>Si puedes soñarlo, puedes hacerlo</p>
-        <p>Comienza a escribir aquí......</p>
-        <button className='btn1'>Guardar</button>
-      </div>
+      <h1>Notas Rápidas</h1>
+      <NoteEditor onAdd={handleAddNote} />
+      <NoteList notes={notes} onDelete={handleDeleteNote} />
       <Footer />
     </div>
   );
-}
+};
+
 export default Notes;
