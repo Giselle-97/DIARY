@@ -2,6 +2,30 @@
 
 .containerHome {
 }
-/*main {
-  min-height: 70vh;
-}*/
+.heroHome {
+  min-height: 80vh;
+}
+.textWelcome {
+  padding: 20px;
+  font-size: 18px;
+}
+.boxIconHome {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.containerInfoIcon {
+  display: flex;
+  padding-bottom: 15px;
+}
+.link-icons {
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconM {
+  width: 40%;
+  height: 40%;
+  padding-bottom: 20px;
+}

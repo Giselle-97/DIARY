@@ -34,11 +34,13 @@ const Notes = () => {
   };
 
   return (
-    <div className='notes'>
+    <div>
       <Header />
-      <h1>Notas Rápidas</h1>
-      <NoteEditor onAdd={handleAddNote} />
-      <NoteList notes={notes} onDelete={handleDeleteNote} />
+      <div className='notes'>
+        <h1>Notas Rápidas</h1>
+        <NoteEditor onAdd={handleAddNote} />
+        <NoteList notes={notes} onDelete={handleDeleteNote} />
+      </div>
       <Footer />
     </div>
   );

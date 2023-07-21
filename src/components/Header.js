@@ -7,7 +7,6 @@ import imgNotes from '../images/notas.png';
 import imgCalendar from '../images/calendario3.png';
 import imgContact from '../images/contacto1.png';
 import imgSettings from '../images/ajustes1.png';
-import imgMenu from '../images/menu.png';
 
 function Header() {
   return (
@@ -22,29 +21,26 @@ function Header() {
         </div>
 
         <div className='headerHome__divIcon'>
-          <Link className='linkMenu' to='/Menu'>
-            <img className='linkMenu__icon' src={imgMenu} alt='menu' />
-          </Link>
-          <Link className='linkHome' to='/Home'>
+          <Link className='linkHome link-iconHeader' to='/Home'>
             <img className='linkHome__icon' src={imgHome} alt='' />
           </Link>
-          <Link className='linkDiary' to='/Diary'>
+          <Link className='linkDiary link-iconHeader' to='/Diary'>
             <img className='linkDiary__icon' src={imgIconDiary} alt='diary' />
           </Link>
-          <Link Link className='linkNotes' to='/Notes'>
+          <Link Link className='linkNotes link-iconHeader' to='/Notes'>
             <img className='linkNotes__icon' src={imgNotes} alt='notes' />
           </Link>
-          <Link Link className='linkCalendar' to='/Calendar'>
+          <Link Link className='linkCalendar link-iconHeader' to='/Calendar'>
             <img
               className='linkCalendar__icon'
               src={imgCalendar}
               alt='calendar'
             />
           </Link>
-          <Link Link className='linkContact' to='/Contact'>
+          <Link Link className='linkContact link-iconHeader' to='/Contact'>
             <img className='linkContact__icon' src={imgContact} alt='contact' />
           </Link>
-          <Link Link className='linkSettings' to='/Settings'>
+          <Link Link className='linkSettings link-iconHeader' to='/Settings'>
             <img
               className='linkSettings__icon'
               src={imgSettings}

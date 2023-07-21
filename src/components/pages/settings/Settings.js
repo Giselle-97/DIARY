@@ -5,6 +5,7 @@ function Settings() {
   return (
     <div className='containerSettings'>
       <Header />
+      <div className='boxSettings'></div>
       <Footer />
     </div>
   );
