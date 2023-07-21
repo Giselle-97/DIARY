@@ -1,5 +1,5 @@
 import '../../../styles/pages/landing.scss';
-import imgDiary from '../../../images/222.png';
+import imgDiary from '../../../images/log5.png';
 import FormLanding from './FormLanding';
 import Footer from '../../Footer';
 

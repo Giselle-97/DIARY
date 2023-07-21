@@ -1,6 +1,6 @@
 import '../styles/pages/footer.scss';
 import { Link } from 'react-router-dom';
-import imgLogo from '../images/Giselle.png';
+import imgLogo from '../images/log4.png';
 
 function Footer() {
   return (
