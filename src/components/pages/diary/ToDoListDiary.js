@@ -11,7 +11,7 @@ function ToDoListDiary() {
   const [editingTask, setEditingTask] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [showEditForm, setShowEditForm] = useState(false);
-  const [showTasks, setShowTasks] = useState(true); // New state for controlling task visibility
+  const [showTasks, setShowTasks] = useState(true);
 
   const addTask = (newTask) => {
     if (newTask.priority === 'alta') {
@@ -43,7 +43,7 @@ function ToDoListDiary() {
   const handleEditTask = (task) => {
     setEditingTask(task);
     setShowEditForm(true);
-    setShowTasks(false); // Hide other tasks when editing
+    setShowTasks(false);
   };
 
   const handleSaveTask = (editedTask) => {
@@ -52,13 +52,13 @@ function ToDoListDiary() {
     );
     setEditingTask(null);
     setShowEditForm(false);
-    setShowTasks(true); // Show tasks again after saving changes
+    setShowTasks(true);
   };
 
   const handleCancelEdit = () => {
     setEditingTask(null);
     setShowEditForm(false);
-    setShowTasks(true); // Show tasks again when canceling edit
+    setShowTasks(true);
   };
 
   const handleSearchTermChange = (e) => {
@@ -91,7 +91,7 @@ function ToDoListDiary() {
         />
       </div>
       <ToDoForm addTask={addTask} />
-      {showTasks && ( // Only show the tasks if showTasks is true
+      {showTasks && (
         <ToDoList
           tasks={sortedTasks}
           toggleTaskCompletion={toggleTaskCompletion}

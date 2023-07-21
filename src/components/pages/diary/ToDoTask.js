@@ -47,8 +47,8 @@ function ToDoTask({ task, toggleTaskCompletion, deleteTask, handleEditTask }) {
               onChange={handleCheckboxChange}
             />
             <div className='taskInfo'>
-              <h3>{title}</h3>
-              <p>{description}</p>
+              <h3 className='taskInfo__title'>{title}</h3>
+              <p className='taskInfo__textDesc'>{description}</p>
               <span className='category'>{category}</span>
               <span className='priority'>{priority}</span>
               <span className='date'>

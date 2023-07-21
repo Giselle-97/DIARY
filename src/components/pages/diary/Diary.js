@@ -8,9 +8,6 @@ function Diary() {
   return (
     <div className='containerDiary'>
       <Header />
-      <div>
-        <p className='text_diary'>365 días y un millón de planes..</p>
-      </div>
       <div className='boxListDiary'>
         <ToDoListDiary />
       </div>

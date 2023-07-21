@@ -12,14 +12,20 @@
   display: flex;
   flex-direction: column;
 }
+.taskInfo__title {
+  text-align: center;
+}
+.taskInfo__textDesc {
+  //max-width: 80px;
+}
 .boxToDoTask2 {
-  width: 70%;
+  //width: 70%;
   display: flex;
 }
 .boxBtnToDoTask {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  padding-bottom: 10px;
 }
 .task {
   display: flex;

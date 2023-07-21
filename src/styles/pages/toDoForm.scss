@@ -16,14 +16,20 @@
   margin-bottom: 10px;
 }
 .inputTaskTitle::placeholder {
-  color: blue;
+  color: gray;
+}
+.inputTaskTitle {
+  border: solid 2px blue;
+}
+.inputTaskTitle:hover {
+  border: solid 2px blue;
 }
 .inputTaskDesc {
   height: 80px;
   border-radius: 5px;
 }
 .inputTaskDesc::placeholder {
-  color: blue;
+  color: gray;
 }
 .boxSelect {
   display: flex;

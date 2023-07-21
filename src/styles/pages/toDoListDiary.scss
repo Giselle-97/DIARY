@@ -1,16 +1,18 @@
 @import '../core/variables';
 
 .boxFilter {
-  background-color: aquamarine;
+  background-color: rgb(226, 250, 242);
   display: flex;
   justify-content: center;
   padding: 10px;
+  transform: translateY(-10px);
 }
 .inputFilter {
-  border: solid 2px blue;
+  // border: none;
+  border: solid 1px blue;
 }
 .inputFilter::placeholder {
-  color: blue;
+  color: gray;
 }
 
 /*

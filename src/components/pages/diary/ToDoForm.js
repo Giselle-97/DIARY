@@ -58,7 +58,7 @@ function ToDoForm({ addTask }) {
             value={newTaskTitle}
             onChange={handleNewTaskTitleChange}
           />
-          <input
+          <textarea
             className='inputTaskDesc'
             type='text'
             placeholder='Descripción de la tarea'
@@ -68,7 +68,9 @@ function ToDoForm({ addTask }) {
         </div>
         <div className='boxSelect'>
           <select value={selectedCategory} onChange={handleCategoryChange}>
-            <option value=''>Categoría</option>
+            <option value='' disabled>
+              Categoría
+            </option>
             <option value='Trabajo'>Trabajo</option>
             <option value='Estudio'>Estudio</option>
             <option value='Compras'>Compras</option>
@@ -76,7 +78,9 @@ function ToDoForm({ addTask }) {
             <option value='Otros'>Otros</option>
           </select>
           <select value={selectedPriority} onChange={handlePriorityChange}>
-            <option value=''>Prioridad</option>
+            <option value='' disabled>
+              Prioridad
+            </option>
             <option value='alta'>Alta</option>
             <option value='media'>Media</option>
             <option value='baja'>Baja</option>

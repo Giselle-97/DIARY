@@ -40,7 +40,7 @@
 .inputContact::placeholder {
   color: #bfc9f3;
 }
-:focus {
+.inputContact:focus {
   outline: 1px solid rgb(227, 30, 171);
 }
 .btnContact {

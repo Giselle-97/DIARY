@@ -56,6 +56,9 @@ function EditTaskForm({ editingTask, handleSaveTask, handleCancelEdit }) {
             value={editedTask.category}
             onChange={handleInputChange}
           >
+            <option value='' disabled>
+              Categoría
+            </option>
             <option value='Trabajo'>Trabajo</option>
             <option value='Estudio'>Estudio</option>
             <option value='Compras'>Compras</option>
@@ -69,6 +72,9 @@ function EditTaskForm({ editingTask, handleSaveTask, handleCancelEdit }) {
             value={editedTask.priority}
             onChange={handleInputChange}
           >
+            <option value='' disabled>
+              Prioridad
+            </option>
             <option value='alta'>Alta</option>
             <option value='media'>Media</option>
             <option value='baja'>Baja</option>
