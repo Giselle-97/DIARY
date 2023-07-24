@@ -48,9 +48,23 @@ function FormLanding() {
                 <img src={imgLinkedin} alt='logo linkedin' className='icon' />
               </div>
             </div>
-            {!showLoginForm && <input type='text' placeholder='name' />}
-            <input type='email' placeholder='email' />
-            <input type='password' placeholder='password' />
+            {!showLoginForm && (
+              <input
+                className='inputFormLanding'
+                type='text'
+                placeholder='name'
+              />
+            )}
+            <input
+              className='inputFormLanding'
+              type='email'
+              placeholder='email'
+            />
+            <input
+              className='inputFormLanding'
+              type='password'
+              placeholder='password'
+            />
             <input
               type='button'
               value={showLoginForm ? 'Iniciar sesión' : 'Registrarse'}
