@@ -1,6 +1,6 @@
 import '../styles/pages/header.scss';
 import { Link } from 'react-router-dom';
-import imgDiary from '../images/log5.png';
+import imgDiary from '../images/logo-diary.png';
 import imgHome from '../images/home.png';
 import imgIconDiary from '../images/diary2.png';
 import imgNotes from '../images/notas.png';

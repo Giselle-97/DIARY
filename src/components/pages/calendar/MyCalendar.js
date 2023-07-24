@@ -34,7 +34,7 @@ function MyCalendar() {
   return (
     <div className='containerCalendar'>
       <Header />
-      <div>
+      <div className='boxCalendar'>
         <Calendar
           localizer={localizer}
           events={myEventsList}

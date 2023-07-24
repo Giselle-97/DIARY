@@ -37,7 +37,7 @@ const Notes = () => {
     <div>
       <Header />
       <div className='notes'>
-        <h1>Notas Rápidas</h1>
+        <h1 className='titleNote'>Notas Rápidas</h1>
         <NoteEditor onAdd={handleAddNote} />
         <NoteList notes={notes} onDelete={handleDeleteNote} />
       </div>

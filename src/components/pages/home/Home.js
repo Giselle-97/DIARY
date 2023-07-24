@@ -22,7 +22,7 @@ function Home() {
             <Link className='linkHome2 link-icons' to='/Home'>
               <img className='linkHome2__icon2 iconM' src={imgHome} alt='' />
             </Link>
-            <p>Volver a la página principal.</p>
+            <p className='textIconHome'>Volver a la página principal.</p>
           </div>
           <div className='containerInfoIcon'>
             <Link className='linkDiary2 link-icons' to='/Diary'>
@@ -32,7 +32,7 @@ function Home() {
                 alt='diary'
               />
             </Link>
-            <p>Acceder a tu agenda personal.</p>
+            <p className='textIconHome'>Acceder a tu agenda personal.</p>
           </div>
           <div className='containerInfoIcon'>
             <Link Link className='linkNotes2 link-icons' to='/Notes'>
@@ -42,7 +42,9 @@ function Home() {
                 alt='notes'
               />
             </Link>
-            <p>Explorar tus notas y apuntes guardados.</p>
+            <p className='textIconHome'>
+              Explorar tus notas y apuntes guardados.
+            </p>
           </div>
           <div className='containerInfoIcon'>
             <Link Link className='linkCalendar2 link-icons' to='/Calendar'>
@@ -52,7 +54,9 @@ function Home() {
                 alt='calendar'
               />
             </Link>
-            <p>Ver tu calendario con eventos y citas.</p>
+            <p className='textIconHome'>
+              Ver tu calendario con eventos y citas.
+            </p>
           </div>
           <div className='containerInfoIcon'>
             <Link Link className='linkContact2 link-icons' to='/Contact'>
@@ -62,7 +66,7 @@ function Home() {
                 alt='contact'
               />
             </Link>
-            <p>Acceder a la página de contacto.</p>
+            <p className='textIconHome'>Acceder a la página de contacto.</p>
           </div>
           <div className='containerInfoIcon'>
             <Link Link className='linkSettings2 link-icons' to='/Settings2'>
@@ -72,7 +76,7 @@ function Home() {
                 alt='settings2'
               />
             </Link>
-            <p>Configurar tus ajustes personales.</p>
+            <p className='textIconHome'>Configurar tus ajustes personales.</p>
           </div>
         </div>
       </main>

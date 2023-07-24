@@ -18,7 +18,7 @@ function FormLanding() {
           <div className='welcomeBack'>
             <div className='divMessage'>
               <h2 className='divMessage__text1'>
-                {showLoginForm ? 'Bienvenido de nuevo' : 'Bienvenido a Diary'}
+                {showLoginForm ? 'Bienvenid@ de nuevo' : 'Bienvenid@ a Diary'}
               </h2>
               <p className='divMessage__text2'>
                 {showLoginForm

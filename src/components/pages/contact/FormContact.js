@@ -35,7 +35,7 @@ function FormContact() {
           />
 
           <textarea
-            className='inputContact'
+            className='inputContact textarea'
             name='message'
             cols='30'
             rows='5'

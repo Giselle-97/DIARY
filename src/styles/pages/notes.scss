@@ -1,4 +1,12 @@
 @import '../core/variables';
 .notes {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.titleNote {
+  padding: 10px;
+  font-family: $aclonica;
+  font-size: 14px;
 }

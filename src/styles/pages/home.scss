@@ -6,8 +6,14 @@
   min-height: 80vh;
 }
 .textWelcome {
-  padding: 20px;
-  font-size: 18px;
+  padding: 20px 15px;
+  font-size: 14px;
+  font-family: $aclonica;
+}
+.textIconHome {
+  font-size: 12px;
+  font-family: $roboto-serif;
+  font-weight: 600;
 }
 .boxIconHome {
   display: flex;

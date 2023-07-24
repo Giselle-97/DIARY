@@ -27,6 +27,7 @@
 .inputTaskDesc {
   height: 80px;
   border-radius: 5px;
+  border: solid 2px blue;
 }
 .inputTaskDesc::placeholder {
   color: gray;
@@ -41,10 +42,17 @@
   justify-content: center;
 }
 .btnAddTask {
-  background-color: rgb(111, 244, 240);
+  font-weight: 400;
+  background: #0707f0;
+  font-family: $courgette;
   width: 130px;
-  border: solid 2px rgb(111, 244, 240);
+  color: #fff;
+  border: solid 2px blue;
   border-radius: 15px;
   padding: 3px 5px;
   cursor: pointer;
+}
+.btnAddTask:hover {
+  background: #0068f9;
+  border: solid 2px #0068f9;
 }

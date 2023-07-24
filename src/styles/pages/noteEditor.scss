@@ -1,0 +1,25 @@
+@import '../core/variables';
+.note-editor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+.inputTitleEditor::placeholder {
+  color: rgb(112, 110, 110);
+}
+.btnNote {
+  height: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  background: #0707f0;
+  font-family: $courgette;
+  // font-size: 18px;
+  //padding: 5px;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  color: #fff;
+}

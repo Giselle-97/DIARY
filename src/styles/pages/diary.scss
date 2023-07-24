@@ -5,6 +5,7 @@
 .boxListDiary {
   display: flex;
   padding: 0 25px 20px 25px;
+  min-height: 62vh;
   flex-direction: column;
   text-align: center;
 }

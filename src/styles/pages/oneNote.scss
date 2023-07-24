@@ -1,0 +1,16 @@
+@import '../core/variables';
+.one-note {
+  border: solid 2px blue;
+  width: 150px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.titleOneNote {
+  font-weight: bold;
+  padding: 5px;
+  font-family: $ribeye;
+}
+.contentNote {
+  font-family: $roboto-serif;
+  padding: 5px;
+}

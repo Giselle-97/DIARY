@@ -1,6 +1,7 @@
 import React from 'react';
 //import './NoteList.scss';
 import OneNote from './OneNote';
+import '../../../styles/pages/noteList.scss';
 
 const NoteList = ({ notes, onDelete }) => {
   return (

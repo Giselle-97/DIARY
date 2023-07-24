@@ -52,6 +52,7 @@ function EditTaskForm({ editingTask, handleSaveTask, handleCancelEdit }) {
         <label>
           Categoría:
           <select
+            className='select'
             name='category'
             value={editedTask.category}
             onChange={handleInputChange}
@@ -65,9 +66,10 @@ function EditTaskForm({ editingTask, handleSaveTask, handleCancelEdit }) {
             <option value='Gimnasio'>Gimnasio</option>
           </select>
         </label>
-        <label>
+        <label className='labelSelect'>
           Prioridad:
           <select
+            className='select'
             name='priority'
             value={editedTask.priority}
             onChange={handleInputChange}
